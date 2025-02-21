@@ -1,0 +1,24 @@
+mosquitto_pub -h <BROKER_IP> -t "menu/update" -m '{
+  "id": 1,
+  "name": {
+    "en": "Classic Burger",
+    "th": "เบอร์เกอร์คลาสสิก"
+  },
+  "category": "Main Courses",
+  "price": "12.99",
+  "image": "/placeholder.svg?height=100&width=100",
+  "orderOptions": [
+    {
+      "id": 1,
+      "name": "Patty",
+      "type": "single",
+      "choices": ["Beef", "Chicken", "Vegetarian"]
+    },
+    {
+      "id": 2,
+      "name": "Extras",
+      "type": "multiple",
+      "choices": ["Cheese", "Bacon", "Egg", "Avocado"]
+    }
+  ]
+}'
