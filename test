@@ -1,24 +1,98 @@
-mosquitto_pub -h <BROKER_IP> -t "menu/update" -m '{
-  "id": 1,
-  "name": {
-    "en": "Classic Burger",
-    "th": "เบอร์เกอร์คลาสสิก"
-  },
-  "category": "Main Courses",
-  "price": "12.99",
-  "image": "/placeholder.svg?height=100&width=100",
-  "orderOptions": [
-    {
-      "id": 1,
-      "name": "Patty",
-      "type": "single",
-      "choices": ["Beef", "Chicken", "Vegetarian"]
+mosquitto_pub -t "menu/update" -m '[
+  {
+    "id": 1,
+    "name": {
+      "en": "Classic Burger",
+      "th": "เบอร์เกอร์คลาสสิก"
     },
-    {
-      "id": 2,
-      "name": "Extras",
-      "type": "multiple",
-      "choices": ["Cheese", "Bacon", "Egg", "Avocado"]
-    }
-  ]
-}'
+    "category": "Main Courses",
+    "price": "12.99",
+    "image": "/placeholder.svg?height=100&width=100",
+    "orderOptions": [
+      {
+        "id": 1,
+        "name": "Patty",
+        "type": "single",
+        "choices": ["Beef", "Chicken", "Vegetarian"]
+      },
+      {
+        "id": 2,
+        "name": "Extras",
+        "type": "multiple",
+        "choices": ["Cheese", "Bacon", "Egg", "Avocado"]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": {
+      "en": "Caesar Salad",
+      "th": "ซีซาร์สลัด"
+    },
+    "category": "Appetizers",
+    "price": "8.99",
+    "image": "/placeholder.svg?height=100&width=100",
+    "orderOptions": [
+      {
+        "id": 1,
+        "name": "Protein",
+        "type": "single",
+        "choices": ["Chicken", "Shrimp", "None"]
+      },
+      {
+        "id": 2,
+        "name": "Dressing",
+        "type": "single",
+        "choices": ["Regular", "Light", "On the side"]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": {
+      "en": "Chocolate Cake",
+      "th": "เค้กช็อกโกแลต"
+    },
+    "category": "Desserts",
+    "price": "6.99",
+    "image": "/placeholder.svg?height=100&width=100",
+    "orderOptions": [
+      {
+        "id": 1,
+        "name": "Size",
+        "type": "single",
+        "choices": ["Small", "Medium", "Large"]
+      },
+      {
+        "id": 2,
+        "name": "Extras",
+        "type": "multiple",
+        "choices": ["Whipped Cream", "Ice Cream", "Berries"]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": {
+      "en": "Iced Tea",
+      "th": "ชาเย็น"
+    },
+    "category": "Drinks",
+    "price": "3.99",
+    "image": "/placeholder.svg?height=100&width=100",
+    "orderOptions": [
+      {
+        "id": 1,
+        "name": "Sweetness",
+        "type": "single",
+        "choices": ["Regular", "Less Sweet", "No Sugar"]
+      },
+      {
+        "id": 2,
+        "name": "Add-ins",
+        "type": "multiple",
+        "choices": ["Lemon", "Mint", "Peach Syrup"]
+      }
+    ]
+  }
+]'
