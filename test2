@@ -1,4 +1,4 @@
-mosquitto_pub -h BROKER_IP -t "menu/category" -m '[
+mosquitto_pub -t "menu/category" -m '[
   { "id": 1, "nameTH": "อาหารจานหลัก", "nameEN": "Main Courses" },
   { "id": 2, "nameTH": "เครื่องเคียง", "nameEN": "Appetizers" },
   { "id": 3, "nameTH": "ขนมหวาน", "nameEN": "Desserts" },
